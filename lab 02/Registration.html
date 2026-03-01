@@ -1,11 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
-</head>
-<body>
-     <header><h1></h1></header>
-</body>
+  </head>
+  <body>
+    <header><h1>Student Registration</h1></header>
+
+    <form>
+      Name : <input type="text" placeholder="Enter your name" required /><br /><br />
+      Registration No :
+      <input type="text" placeholder="Enter Registration No" required /><br /><br />
+      Email : <input type="email" placeholder="Enter email" required /><br /><br />
+      Password : <input type="password" placeholder=" enter password" required />
+      <br /><br />
+
+      Course :
+      <select required>
+        <option value="">Select Course</option>
+        <option>Web Technology</option>
+        <option>Operating System</option>
+        <option>Artificial Intelligence</option>
+        <option>Introduction to Data science</option>
+      </select>
+      <br /><br />
+
+      Semester :
+      <input type="radio" name="sem"  required/> 1 <input type="radio" name="sem" /> 2
+      <input type="radio" name="sem" /> 3 <input type="radio" name="sem" /> 4
+      <br /><br />
+
+      Terms and Condition :
+      <input type="checkbox"  required /> I accept term and condition <br /><br />
+
+      Button :
+      <button type="submit">submit</button>
+    </form>
+  </body>
 </html>
