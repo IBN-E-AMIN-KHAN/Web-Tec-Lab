@@ -1,11 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Schedule</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <table border="1">
+      <caption>
+        Weekly Schedule
+      </caption>
+      <tr>
+        <!--Tr is using for table row-->
+        <th>Time</th>
+        <th>Monday</th>
+        <!--Th is using for table heading-->
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+
+      <tr>
+        <td>8.00 - 9.00</td>
+        <!--Td is using for table data-->
+        <td rowspan="2">Operating System (L)</td>
+        <!-- Row space is used for we take to rows -->
+        <td rowspan="2">Web Technology (L)</td>
+        <td rowspan="2">Linear algebra</td>
+        <td rowspan="2">Introduction to Data science (T)</td>
+        <td rowspan="2">Quran Turjuma</td>
+      </tr>
+      <tr>
+        <td>9.10 - 10.00</td>
+      </tr>
+
+      <tr>
+        <td>10.30 - 11.30</td>
+        <td rowspan="2">Applied Physics</td>
+        <td rowspan="2"></td>
+        <td rowspan="2">Operating System (T)</td>
+        <td rowspan="2">Artificial Intelligence (T)</td>
+        <td rowspan="2"></td>
+      </tr>
+
+      <tr>
+        <td>11.40 - 12.00</td>
+      </tr>
+
+      <tr>
+        <td>1.00 - 1.30</td>
+        <td colspan="6">
+          <!-- colspan used for we taka colunms in our choice -->
+          <center><b>prayer Break</b></center>
+        </td>
+      </tr>
+
+      <tr>
+        <td>1.30 - 2.30</td>
+        <td rowspan="2"></td>
+        <td rowspan="2"></td>
+        <td rowspan="2">Artificial Intelligence (L)</td>
+        <td rowspan="2">web Technology (T)</td>
+        <td rowspan="2">Introduction to Data science (L)</td>
+      </tr>
+
+      <tr>
+        <td>2.40 - 4.00</td>
+      </tr>
+    </table>
+  </body>
 </html>
