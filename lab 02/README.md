@@ -8,4 +8,4 @@ This project contains:
 - GitHub Pages Deployment
 
 Student: Ibn e amin 
-University: UET
+University: UET pehawar
