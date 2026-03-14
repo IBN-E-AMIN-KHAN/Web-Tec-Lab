@@ -91,3 +91,6 @@ h1::after{
   content: "**";
   color: gold;
 }
+*::selection{
+  background-color: blueviolet;
+}
