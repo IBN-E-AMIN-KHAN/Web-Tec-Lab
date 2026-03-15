@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Navigation Menu</title>
+    <link rel="stylesheet" href="../Styles/Navigation.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Brand<span>Studio</span></div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-trigger">Services <small>▼</small></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">SEO Marketing</a></li>
+            <li><a href="#">Cloud Hosting</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#" class="nav-cta">Get Started</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
