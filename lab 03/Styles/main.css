@@ -1,0 +1,241 @@
+/* --- 1. Variables & Global Setup --- */
+:root {
+  --primary: #4f46e5; /* Indigo */
+  --primary-hover: #4338ca;
+  --secondary: #0f172a; /* Deep Slate Navy */
+  --bg: #f8fafc; /* Soft background */
+  --white: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --radius: 16px;
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* --- 2. Header Section --- */
+.main-header {
+  background: var(--secondary);
+  color: var(--white);
+  padding: 80px 20px;
+  text-align: center;
+  /* subtle gradient for a premium look */
+  background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-content h2 {
+  font-weight: 400;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.student-info p {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.student-info strong {
+  color: var(--white);
+}
+
+/* --- 3. Navigation Bar --- */
+.main-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px); /* Modern Glassmorphism effect */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 12px 0;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.main-nav a:hover {
+  color: var(--primary);
+  background: #f1f5f9;
+}
+
+/* --- 4. Main Container & Intro --- */
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.intro h3 {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.intro p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* --- 5. Task Grid --- */
+.task-grid {
+  display: grid;
+  /* Responsive Grid: Changes columns based on screen width */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.task-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.task-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+/* Huge background number trick */
+.card-number {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #f1f5f9;
+  z-index: 0;
+}
+
+.task-card h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--secondary);
+}
+
+.task-card p {
+  position: relative;
+  z-index: 1;
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 30px;
+  flex-grow: 1; /* Pushes the button to the bottom */
+}
+
+/* View link styled as a button */
+.view-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.view-link:hover {
+  color: var(--primary-hover);
+  padding-left: 8px; /* Subtle slide effect on text */
+}
+
+/* --- 6. Footer --- */
+.main-footer {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--white);
+  border-top: 1px solid #e2e8f0;
+  margin-top: 60px;
+}
+
+.main-footer p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.main-footer small {
+  color: var(--primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- 7. Mobile Responsive Design --- */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .main-nav ul {
+    gap: 4px;
+  }
+
+  .main-nav a {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .container {
+    margin: 30px auto;
+  }
+}
