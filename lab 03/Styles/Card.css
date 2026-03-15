@@ -1,0 +1,108 @@
+/* --- Base Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  background-color: #f6f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --- The Container --- */
+.card-container {
+  display: grid;
+  /* This creates a grid that automatically adds columns based on the screen width */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* Consistent spacing between cards */
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* --- The Product Card --- */
+.product-card {
+  background-color: white;
+  /* Borders and consistent shape */
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden; /* Clips children (like images) to the rounded corners */
+
+  /* We use Flexbox here to align the content and push the button to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Shadow effects for depth */
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+
+  /* Transition for the hover effect */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* --- Hover Transformations --- */
+.product-card:hover {
+  transform: translateY(-8px); /* Card lifts up */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Shadow deepens */
+}
+
+/* --- Image and Content --- */
+.card-image img {
+  width: 100%;
+  /* aspect-ratio ensures all images are the same shape regardless of the file */
+  aspect-ratio: 16 / 10;
+  object-fit: cover; /* Crops the image to fill the space perfectly */
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* --- Call-to-Action Buttons --- */
+.cta-button {
+  width: 100%;
+  background-color: #4f46e5; /* Primary color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+
+  /* Smooth transition for the background color */
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4338ca; /* Darker primary color on hover */
+}

@@ -1,0 +1,96 @@
+/*five basic selectors: element, id, class, universal, and group selector*/
+/*element selector*/
+h1 {
+  color: darkblue;
+}
+/*class selector*/
+.intro {
+  font-style: italic;
+}
+/*id selector*/
+#container {
+  border: 2px solid black;
+}
+/*universal selector*/
+* {
+  font-weight: 500;
+}
+/*group selector*/
+h1,
+footer {
+  text-align: center;
+}
+
+
+/* three Attribute selectors: */
+input[type="text"] {
+  background-color: lightyellow;
+}
+input[type] {
+  font-family: 'Courier New', Courier, monospace ;
+  color: black;
+}
+a[target="_blank"] {
+  font-weight: bold;
+}
+
+/* combinator selectors: descendant, child, adjacent sibling, and general sibling combinators*/
+/*descendant combinator*/
+#container ul li  {
+  list-style: circle;;
+}
+/*adjacent sibling combinator*/
+#container > a {
+   color: blueviolet;
+}
+/*Adjacent sibling combinator*/
+h1 + p {
+  background-color: lightblue;
+  font-family: 'Times New Roman', Times, serif;
+}
+.intro ~ footer {
+  background-color: lightgray;
+}
+
+
+/* pseudo-class selectors: */
+/*hover pseudo-class selector*/
+a:hover{
+  background-color: lightslategray;
+}
+/*active pseudo-class selector*/
+input:active{
+  background-color: lightsalmon;
+}
+/*first child pseudo-class selector*/
+li:first-child {
+  background-color: lightslategrey;
+}
+/*nth-child pseudo-class selector*/
+li:nth-child(2) {
+  background-color: lightblue;
+}
+/*last-child pseudo-class selector*/
+li:last-child {
+  background-color: lightcoral;
+}
+/*focus pseudo-class selector*/
+input:focus {
+  outline: 2px  solid lightseagreen;
+}
+
+
+/* pseudo-element selectors: */
+/*before pseudo-element selector*/
+h1::before{
+  content: "**";
+  color: gold;
+}
+/*after pseudo-element selector*/
+h1::after{
+  content: "**";
+  color: gold;
+}
+*::selection{
+  background-color: blueviolet;
+}

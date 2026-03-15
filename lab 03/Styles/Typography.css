@@ -1,0 +1,88 @@
+/*Google Fonts*/
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+.lora {
+    font-family: 'Lora', serif;
+}
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Font Sizes*/
+.small{
+    font-size: 20px;
+}
+.medium{
+    font-size: 1.5em;
+}.large{
+    font-size: 2rem
+}
+
+/*Text Alignment*/
+.left{
+    text-align: left;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.justify{
+    text-align: justify;
+}
+
+/*Text Decoration*/
+.underline{
+    text-decoration: underline;
+}
+.line-through{
+    text-decoration: line-through;
+}
+.overline{
+    text-decoration: overline;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.lowercase{
+    text-transform: lowercase;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+
+/*Text shadow*/
+.shadow-light{
+    text-shadow: 1px 1px 2px #aaa;
+}
+.shadow-strong{
+    text-shadow: 2px 2px 4px #333;
+}
+.shadow-colored{
+    text-shadow: 2px 2px 4px #ff0000;
+}
+
+h1{
+    text-align: center;
+    color: darkblue;
+    font-weight: bold;
+    background-color: lightgray;
+}
+footer{
+    text-align: center;
+    
+    font-style: italic;
+    background-color: lightgray;
+}
+
+h2{
+    background: lavenderblush;
+    color: darkmagenta;
+
+}
+h2:hover{
+    background: lightpink;
+    color: darkred;
+}

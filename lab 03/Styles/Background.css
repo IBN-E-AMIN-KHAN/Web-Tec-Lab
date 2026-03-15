@@ -1,0 +1,116 @@
+/* --- Base Layout & Typography --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* A responsive grid to display our background boxes */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Base styles for all demonstration boxes */
+.box {
+  height: 250px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Adding a text shadow makes the white text readable on busy backgrounds */
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+}
+/* --- 1. Solid Color --- */
+.solid-color {
+  background-color: #6c5ce7;
+}
+/* --- 2. Image Backgrounds & Repeat Patterns --- */
+/* Picture 1: A small 50x50 image for repeating patterns */
+.bg-repeat {
+  background-image: url("../Images/Background/pattern.png");
+  background-repeat: repeat; /* This is the default */
+}
+
+.bg-repeat-x {
+  background-color: #2d3436; /* Fallback/background behind the image */
+  background-image: url("../Images/Background/pattern.png");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.bg-repeat-y {
+  background-color: #2d3436;
+  background-image: url("../Images/Background/pattern.png");
+  background-repeat: repeat-y;
+  background-position: center;
+}
+.bg-no-repeat {
+  background-color: #2d3436;
+  background-image: url("../Images/Background/pattern.png"); /* Slightly larger for this box */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* --- 3. Gradients --- */
+.linear-gradient {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+.radial-gradient {
+  background: radial-gradient(circle, #f6d365 0%, #fda085 100%);
+}
+/* --- 4. Multiple Background Layers --- */
+/* Combines Picture 1 (small, no-repeat) over Picture 2 (large landscape) */
+.multiple-bg {
+  background: 
+        /* Top Layer: Small image, centered, not repeating */
+    url("../Images/Background/pattern.png") center no-repeat,
+    /* Bottom Layer: Large image, covering the whole box */
+    url("../Images/Background/background.jpg") center/cover no-repeat;
+}
+/* --- 5. Background Blend Modes --- */
+/* Picture 2: A larger background image blended with colors and gradients */
+.blend-multiply {
+  background-image: url("../Images/Background/background.jpg");
+  background-color: #ff7675; /* Solid color blended with image */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+.blend-screen {
+  background-image:
+    linear-gradient(to right, #0984e3, #6c5ce7),
+    /* Gradient layer */ url("../Images/Background/background.jpg"); /* Image layer */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+}
+.blend-luminosity {
+  background-image: url("../Images/Background/background.jpg");
+  background-color: #fdcb6e;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: luminosity;
+}
+.blend-overlay {
+  background-image:
+    radial-gradient(circle, #00b894, transparent),
+    url("../Images/Background/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
