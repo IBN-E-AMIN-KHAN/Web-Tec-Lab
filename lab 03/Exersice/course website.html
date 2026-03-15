@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Schedule</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="Profile.html">Profile</a>
+      <a href="Registration.html">Registration</a>
+      <a href="Navigation.html">Navigation</a>
+    </nav>
+
+    <div class="table-container">
+      <table>
+        <caption>
+          Weekly Academic Schedule
+        </caption>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00 - 10:00</td>
+            <td rowspan="1" class="type-l">Operating System (L)</td>
+            <td rowspan="1" class="type-l">Web Technology (L)</td>
+            <td rowspan="1">Linear Algebra</td>
+            <td rowspan="1" class="type-t">Data Science (T)</td>
+            <td rowspan="1">Quran Turjuma</td>
+          </tr>
+          <tr>
+            <td>10:30 - 12:00</td>
+            <td>Applied Physics</td>
+            <td class="empty">--</td>
+            <td class="type-t">Operating System (T)</td>
+            <td class="type-t">Artificial Intelligence (T)</td>
+            <td class="empty">--</td>
+          </tr>
+          <tr class="break-row">
+            <td>01:00 - 01:30</td>
+            <td colspan="5">Prayer Break</td>
+          </tr>
+          <tr>
+            <td>01:30 - 04:00</td>
+            <td class="empty">--</td>
+            <td class="empty">--</td>
+            <td class="type-l">Artificial Intelligence (L)</td>
+            <td class="type-t">Web Technology (T)</td>
+            <td class="type-l">Data Science (L)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
