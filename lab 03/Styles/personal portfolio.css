@@ -1,0 +1,123 @@
+/* --- 1. Global Reset & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f5f9; /* Soft light gray background */
+    color: #1e293b; /* Dark slate text */
+    line-height: 1.6;
+}
+
+/* --- 2. Navigation Styling --- */
+.navbar {
+    background-color: #1e293b;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+}
+
+.nav-container a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-container a:hover {
+    color: #818cf8; /* Indigo hover color */
+}
+
+.nav-container a.active {
+    color: white;
+    border-bottom: 2px solid #818cf8;
+}
+
+/* --- 3. Layout & Spacing --- */
+.profile-card {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 20px;
+}
+
+.name-title {
+    font-size: 2.5rem;
+    color: #4f46e5; /* Indigo primary color */
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+h2 {
+    color: #334155;
+    margin: 20px 0 10px 0;
+    font-size: 1.4rem;
+    border-left: 4px solid #4f46e5;
+    padding-left: 10px;
+}
+
+/* --- 4. Image Styling & Effects --- */
+.img-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Keeps image proportions */
+    border-radius: 50%; /* Makes it circular */
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: grayscale(20%);
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+/* --- 5. Contact Info --- */
+.contact-links p {
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* --- 6. Responsive Design --- */
+@media (max-width: 600px) {
+    .profile-card {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .name-title {
+        font-size: 1.8rem;
+    }
+
+    .nav-container a {
+        display: block; /* Stack links vertically on small screens */
+        margin: 10px 0;
+    }
+}
