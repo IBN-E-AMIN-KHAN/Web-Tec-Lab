@@ -1,0 +1,151 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #34495e;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, #3498db, transparent);
+  margin: 30px 0;
+}
+
+/* Section 1: Block vs Inline vs Inline-Block */
+.box {
+  padding: 15px;
+  margin: 10px;
+  border: 2px solid #3498db;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  background-color: #d5dbdc;
+}
+
+.block-el {
+  display: block;
+}
+
+.inline-el {
+  display: inline;
+}
+
+.inline-block-el {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+}
+
+/* Section 2: Table Display without Table Markup */
+.pseudo-table {
+  display: table;
+  width: 100%;
+  border-spacing: 10px;
+}
+
+.pseudo-row {
+  display: table-row;
+}
+
+.pseudo-cell {
+  display: table-cell;
+  padding: 20px;
+  border: 2px solid #3498db;
+  background: #f0f8ff;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.pseudo-cell:hover {
+  background: #e3f2fd;
+}
+
+/* Section 3: Hidden Elements  */
+.hidden-none {
+  display: none;
+}
+
+.hidden-invisible {
+  visibility: hidden;
+}
+
+/* Section 4: Responsive Behavior */
+.responsive-box {
+  display: block;
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.responsive-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(230, 126, 34, 0.3);
+}
+
+.mobile-only {
+  background: #f39c12;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+/* Responsive Behavior - Tablet & Desktop */
+@media (min-width: 768px) {
+  .responsive-box {
+    display: inline-block;
+    width: 32%;
+    margin: 1%;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}

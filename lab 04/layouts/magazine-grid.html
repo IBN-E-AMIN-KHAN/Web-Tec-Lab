@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 11: Magazine Grid Layout</title>
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/grid.css" />
+  </head>
+  <body>
+    <header
+      class="container"
+      style="text-align: center; padding: 40px 0; border-bottom: 2px solid #000"
+    >
+      <h1 style="font-family: &quot;Georgia&quot;, serif; font-size: 3rem">
+        THE CSS GAZETTE
+      </h1>
+      <p>Issue #11 - The Grid Revolution</p>
+    </header>
+
+    <div class="magazine-wrapper">
+      <article class="mag-item hero-article">
+        <img
+          src="https://picsum.photos/800/450"
+          alt="Hero Image"
+          style="margin-bottom: 15px"
+        />
+        <h2>The Future of Web Layouts: How CSS Grid Changed Everything</h2>
+        <p><strong>By Ibn e Amin</strong> | 5 Min Read</p>
+        <p>
+          CSS Grid allows us to create asymmetric designs that were previously
+          impossible without complex hacks or heavy frameworks...
+        </p>
+      </article>
+
+      <article class="mag-item">
+        <h3>Flexbox vs Grid</h3>
+        <p>
+          Understanding when to use one-dimensional vs two-dimensional layouts.
+        </p>
+      </article>
+
+      <article class="mag-item">
+        <h3>Color Trends</h3>
+        <p>Why dark mode is becoming the default for developers.</p>
+      </article>
+
+      <article class="mag-item">
+        <h3>Responsive Typography</h3>
+        <p>
+          Using the <code>clamp()</code> function for better reading
+          experiences.
+        </p>
+      </article>
+
+      <aside class="mag-item sidebar-article">
+        <h3>Quick Hits</h3>
+        <ul style="list-style: none; padding: 0">
+          <li style="margin-bottom: 15px; border-bottom: 1px solid #eee">
+            <strong>01.</strong> Accessibility in 2024
+          </li>
+          <li style="margin-bottom: 15px; border-bottom: 1px solid #eee">
+            <strong>02.</strong> The Rise of Container Queries
+          </li>
+          <li style="margin-bottom: 15px">
+            <strong>03.</strong> Mastering Z-Index
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </body>
+</html>

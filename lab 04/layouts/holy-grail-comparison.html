@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 7: Holy Grail Comparison</title>
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/float.css" />
+    <link rel="stylesheet" href="../Styles/flexbox.css" />
+    <link rel="stylesheet" href="../Styles/grid.css" />
+    <style>
+      .demo-block {
+        border: 2px solid #333;
+        margin-bottom: 50px;
+        padding: 10px;
+      }
+      header,
+      footer {
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      nav,
+      aside {
+        padding: 15px;
+        min-height: 100px;
+      }
+      main {
+        padding: 20px;
+        min-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="demo-block">
+      <h2>1. Float-Based Method</h2>
+      <div class="hg-float-container">
+        <header>Header</header>
+        <nav class="hg-float-nav">Nav (Float)</nav>
+        <main class="hg-float-main">Main Content</main>
+        <aside class="hg-float-aside">Aside (Float)</aside>
+        <footer style="clear: both">Footer</footer>
+      </div>
+    </section>
+
+    <section class="demo-block">
+      <h2>2. Flexbox Method (Mobile First)</h2>
+      <div class="hg-flex-container">
+        <header>Header</header>
+        <div class="hg-flex-body">
+          <main class="hg-flex-main">Main Content</main>
+          <nav class="hg-flex-nav">Nav (Flex)</nav>
+          <aside class="hg-flex-aside">Aside (Flex)</aside>
+        </div>
+        <footer>Footer</footer>
+      </div>
+    </section>
+
+    <section class="demo-block">
+      <h2>3. CSS Grid Method (Area Naming)</h2>
+      <div class="hg-grid-container">
+        <header class="header">Header</header>
+        <nav class="nav">Nav (Grid)</nav>
+        <main class="main">Main Content</main>
+        <aside class="aside">Aside (Grid)</aside>
+        <footer class="footer">Footer</footer>
+      </div>
+    </section>
+  </body>
+</html>

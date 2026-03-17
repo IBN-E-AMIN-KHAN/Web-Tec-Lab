@@ -1,0 +1,72 @@
+/* 1. Desktop Styles (Default) */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.responsive-table th {
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* 2. Tablet & Mobile Styles (< 768px) */
+@media screen and (max-width: 768px) {
+  /* Force table to not behave like a table anymore */
+  .responsive-table,
+  .responsive-table thead,
+  .responsive-table tbody,
+  .responsive-table th,
+  .responsive-table td,
+  .responsive-table tr {
+    display: block;
+  }
+
+  /* Hide table headers (but keep for screen readers) */
+  .responsive-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .responsive-table tr {
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .responsive-table td {
+    /* Behave like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%; /* Make space for the label */
+    text-align: right;
+  }
+
+  .responsive-table td:last-child {
+    border-bottom: 0;
+  }
+
+  /* 3. The Magic: Label Injection */
+  .responsive-table td::before {
+    /* Pulls text from the 'data-label' attribute in HTML */
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+}

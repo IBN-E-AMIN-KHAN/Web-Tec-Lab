@@ -1,0 +1,180 @@
+/* --- 1. Base Styles (Mobile: 0px - 767px) --- */
+body {
+  background-color: #fce4ec; /* Light Pink for Mobile */
+  transition: background-color 0.5s ease;
+}
+
+.breakpoint-indicator::after {
+  content: "Current Device: MOBILE (< 768px)";
+  font-weight: bold;
+  color: #c2185b;
+}
+
+/* Typography Scaling */
+h1 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+
+/* Navigation Pattern: Stacked */
+.demo-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* --- 2. Tablet (768px and up) --- */
+@media (min-width: 768px) {
+  body {
+    background-color: #e3f2fd;
+  } /* Light Blue */
+
+  .breakpoint-indicator::after {
+    content: "Current Device: TABLET (768px+)";
+    color: #1976d2;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .demo-nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* --- 3. Small Desktop (1024px and up) --- */
+@media (min-width: 1024px) {
+  body {
+    background-color: #e8f5e9;
+  } /* Light Green */
+
+  .breakpoint-indicator::after {
+    content: "Current Device: SMALL DESKTOP (1024px+)";
+    color: #388e3c;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- 4. Large Desktop (1200px and up) --- */
+@media (min-width: 1200px) {
+  body {
+    background-color: #fff3e0;
+  } /* Light Orange */
+
+  .breakpoint-indicator::after {
+    content: "Current Device: LARGE DESKTOP (1200px+)";
+    color: #f57c00;
+  }
+
+  /* Layout change: Max width container */
+  .demo-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    padding: 40px;
+    background: white;
+  }
+}
+
+/* ============================================================
+   1. BASE STYLES (Mobile First: 0px to 767px)
+   ============================================================ */
+body {
+  font-size: 14px;
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.status-box {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 20px;
+}
+.status-box::after {
+  content: "Device: Mobile Phone";
+}
+
+/* ============================================================
+   2. TABLET (768px and up)
+   ============================================================ */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+
+  .status-box {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+  }
+  .status-box::after {
+    content: "Device: Tablet";
+  }
+}
+
+/* ============================================================
+   3. SMALL DESKTOP (1024px and up)
+   ============================================================ */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .status-box {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+  }
+  .status-box::after {
+    content: "Device: Small Desktop / Laptop";
+  }
+}
+
+/* ============================================================
+   4. LARGE DESKTOP (1200px and up)
+   ============================================================ */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .status-box {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+  }
+  .status-box::after {
+    content: "Device: Large Desktop";
+  }
+}
+
+/* ============================================================
+   5. EXTRA LARGE (1400px and up)
+   ============================================================ */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .status-box {
+    background: #e2e3e5;
+    border: 1px solid #d6d8db;
+  }
+  .status-box::after {
+    content: "Device: Ultra-Wide Monitor";
+  }
+}

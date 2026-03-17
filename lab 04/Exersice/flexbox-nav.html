@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4: Flexbox Navigation System</title>
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/flexbox.css" />
+  </head>
+  <body>
+    <header class="main-nav">
+      <div class="logo">FlexBrand</div>
+
+      <button class="menu-toggle" id="mobile-menu-btn">☰</button>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <button
+            class="menu-toggle"
+            id="close-menu-btn"
+            style="position: absolute; top: 15px; right: 20px"
+          >
+            ✕
+          </button>
+
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown" id="services-dropdown">
+            <a href="#">Services ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">SEO</a></li>
+              <li><a href="#">Marketing</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="page-wrapper">
+      <aside class="sidebar-nav">
+        <h3>Dashboard</h3>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Messages</a>
+        <a href="#">Analytics</a>
+      </aside>
+
+      <main class="main-content">
+        <h2>Flexbox Navigation Mastery</h2>
+        <p>
+          Resize the window to see the horizontal menu transform into a slide-in
+          hamburger menu, and watch the sidebar stack to the top!
+        </p>
+      </main>
+    </div>
+
+    <script>
+      const mobileBtn = document.getElementById("mobile-menu-btn");
+      const closeBtn = document.getElementById("close-menu-btn");
+      const navLinks = document.getElementById("nav-links");
+      const dropdown = document.getElementById("services-dropdown");
+
+      // Toggle Sidebar Menu
+      mobileBtn.addEventListener("click", () =>
+        navLinks.classList.add("active"),
+      );
+      closeBtn.addEventListener("click", () =>
+        navLinks.classList.remove("active"),
+      );
+
+      // Toggle Mobile Dropdown on click (since hover doesn't work on touch screens)
+      dropdown.addEventListener("click", (e) => {
+        if (window.innerWidth <= 767) {
+          dropdown.classList.toggle("active");
+        }
+      });
+    </script>
+  </body>
+</html>
