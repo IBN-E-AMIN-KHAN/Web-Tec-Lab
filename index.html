@@ -3,167 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ibn e Amin | Lab 03 & 04 Portfolio</title>
-    <link rel="stylesheet" href="lab%2003/Styles/main.css" />
+    <title>Ibn e Amin | Web Technology Lab Hub</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="main-header">
-      <div class="header-content">
-        <h1>Lab 03 & 04 Portfolio</h1>
-        <h2>University of Engineering & Technology, Peshawar</h2>
-        <div class="student-info">
-          <p><strong>Department:</strong> Computer Science</p>
-          <p><strong>Student:</strong> Ibn e Amin</p>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-hero" id="top">
+      <div class="container hero-inner reveal" style="--delay: 0s">
+        <nav class="site-nav">
+          <a href="#labs">Labs</a>
+          <a href="#lab-03">Lab 03 Exercises</a>
+          <a href="#lab-04">Lab 04 Exercises</a>
+          <a class="nav-cta" href="lab%2004/">Open Lab 04</a>
+        </nav>
+
+        <p class="eyebrow">UET Peshawar - Web Technologies</p>
+        <h1>Lab Portfolio Hub</h1>
+        <p class="lead">
+          Clear, organized access to every lab and exercise. Start with a lab
+          home page or jump straight to a specific task.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="lab%2003/">Open Lab 03</a>
+          <a class="btn ghost" href="lab%2004/">Open Lab 04</a>
+        </div>
+        <div class="status-pill">You are here: Main Hub</div>
+        <div class="hero-meta">
+          <span><strong>Student:</strong> Ibn e Amin</span>
+          <span><strong>Department:</strong> Computer Science</span>
+          <span><strong>Year:</strong> 2026</span>
         </div>
       </div>
     </header>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="Exersice/Selector.html">Selectors</a></li>
-        <li><a href="Exersice/Typography.html">Typography</a></li>
-        <li><a href="Exersice/Backgroung.html">Background</a></li>
-        <li><a href="Exersice/Image.html">Images</a></li>
-        <li><a href="Exersice/Button.html">Buttons</a></li>
-        <li><a href="Exersice/Form.html">Forms</a></li>
-        <li><a href="Exersice/Card.html">Cards</a></li>
-        <li><a href="Exersice/Navigation.html">Navigation</a></li>
-        <li><a href="Exersice/Transform.html">Transforms</a></li>
-        <li><a href="Exersice/advance effect.html">Advanced</a></li>
-      </ul>
-    </nav>
-
-    <main class="container">
-      <section class="intro">
-        <h3>Web Technology Lab Gallery</h3>
-        <p>
-          A comprehensive showcase of modern CSS techniques and UI components.
-        </p>
+    <main id="main">
+      <section class="section reveal" id="labs" style="--delay: 0.1s">
+        <div class="container section-head">
+          <h2>Where to Go Next</h2>
+          <p>
+            Pick a lab to see the full collection or use the exercise grids
+            below for direct access.
+          </p>
+        </div>
+        <div class="container lab-grid">
+          <article class="lab-card">
+            <div class="lab-label">Lab 03</div>
+            <h3>CSS Foundations &amp; UI Components</h3>
+            <p>
+              Selectors, typography, backgrounds, images, and core component
+              styling.
+            </p>
+            <div class="lab-actions">
+              <a class="btn primary" href="lab%2003/">Open Lab 03 Home</a>
+              <a class="btn ghost" href="#lab-03">View Exercises</a>
+            </div>
+          </article>
+          <article class="lab-card">
+            <div class="lab-label">Lab 04</div>
+            <h3>Layouts &amp; Responsive Design</h3>
+            <p>
+              Flexbox, grid, positioning, media queries, and responsive
+              components.
+            </p>
+            <div class="lab-actions">
+              <a class="btn primary" href="lab%2004/">Open Lab 04 Home</a>
+              <a class="btn ghost" href="#lab-04">View Exercises</a>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <div class="task-grid">
-        <article class="task-card">
-          <div class="card-number">01</div>
-          <h3>CSS Selectors</h3>
-          <p>
-            Practice with element, class, ID, attribute selectors and
-            pseudo-classes.
-          </p>
-          <a href="Exersice/Selector.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
+      <section class="section reveal" id="lab-03" style="--delay: 0.2s">
+        <div class="container section-head">
+          <div>
+            <p class="section-tag">Lab 03</p>
+            <h2>CSS Foundations Exercises</h2>
+          </div>
+          <a class="text-link" href="lab%2003/">Go to Lab 03 Home</a>
+        </div>
+        <div class="container link-grid">
+          <a class="link-card" href="lab%2003/Exersice/Selector.html">
+            <span>01</span>
+            <h4>Selectors</h4>
+            <p>Element, class, ID, and pseudo-class practice.</p>
+          </a>
+          <a class="link-card" href="lab%2003/Exersice/Typography.html">
+            <span>02</span>
+            <h4>Typography</h4>
+            <p>Font styling, alignment, and text effects.</p>
+          </a>
+          <a class="link-card" href="lab%2003/Exersice/Backgroung.html">
+            <span>03</span>
+            <h4>Backgrounds</h4>
+            <p>Solid colors, images, and layered gradients.</p>
+          </a>
+          <a class="link-card" href="lab%2003/Exersice/Image.html">
+            <span>04</span>
+            <h4>Image Styling</h4>
+            <p>Borders, filters, and hover animations.</p>
+          </a>
+          <a class="link-card" href="lab%2003/Exersice/Button.html">
+            <span>05</span>
+            <h4>Buttons</h4>
+            <p>Custom buttons with transitions and states.</p>
+          </a>
+          <a class="link-card" href="lab%2003/Exersice/Form.html">
+            <span>06</span>
+            <h4>Forms</h4>
+            <p>Styled inputs, focus states, and validation UI.</p>
+          </a>
+          <a class="link-card" href="lab%2003/Exersice/Card.html">
+            <span>07</span>
+            <h4>Cards</h4>
+            <p>Shadowed cards with depth and spacing.</p>
+          </a>
+          <a class="link-card" href="lab%2003/Exersice/Navigation.html">
+            <span>08</span>
+            <h4>Navigation</h4>
+            <p>Responsive menu layouts and dropdowns.</p>
+          </a>
+          <a class="link-card" href="lab%2003/Exersice/Transform.html">
+            <span>09</span>
+            <h4>Transforms</h4>
+            <p>2D and 3D transforms with smooth motion.</p>
+          </a>
+          <a class="link-card" href="lab%2003/Exersice/advance%20effect.html">
+            <span>10</span>
+            <h4>Advanced Effects</h4>
+            <p>Gradients, animations, and custom controls.</p>
+          </a>
+        </div>
+      </section>
 
-        <article class="task-card">
-          <div class="card-number">02</div>
-          <h3>Typography</h3>
-          <p>
-            Exploring font styles, alignment, transformation, and text shadows.
-          </p>
-          <a href="Exersice/Typography.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
-
-        <article class="task-card">
-          <div class="card-number">03</div>
-          <h3>Backgrounds</h3>
-          <p>
-            Solid colors, image backgrounds, and multi-layer gradient effects.
-          </p>
-          <a href="Exersice/Backgroung.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
-
-        <article class="task-card">
-          <div class="card-number">04</div>
-          <h3>Image Styling</h3>
-          <p>
-            Applying rounded corners, borders, filters, and hover animations to
-            images.
-          </p>
-          <a href="Exersice/Image.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
-
-        <article class="task-card">
-          <div class="card-number">05</div>
-          <h3>Button Design</h3>
-          <p>
-            Creating interactive buttons with custom transitions and hover
-            states.
-          </p>
-          <a href="Exersice/Button.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
-
-        <article class="task-card">
-          <div class="card-number">06</div>
-          <h3>Form Styling</h3>
-          <p>
-            A fully styled registration form with focus states and error
-            handling UI.
-          </p>
-          <a href="Exersice/Form.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
-
-        <article class="task-card">
-          <div class="card-number">07</div>
-          <h3>Product Cards</h3>
-          <p>Service and product cards using box-shadows and depth effects.</p>
-          <a href="Exersice/Card.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
-
-        <article class="task-card">
-          <div class="card-number">08</div>
-          <h3>Navigation Menus</h3>
-          <p>
-            Responsive horizontal and vertical menus with dropdown capabilities.
-          </p>
-          <a href="Exersice/Navigation.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
-
-        <article class="task-card">
-          <div class="card-number">09</div>
-          <h3>CSS Transforms</h3>
-          <p>
-            Demonstrating 2D and 3D rotations, scaling, and smooth translations.
-          </p>
-          <a href="Exersice/Transform.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
-
-        <article class="task-card">
-          <div class="card-number">10</div>
-          <h3>Advanced Effects</h3>
-          <p>
-            Gradient text, custom checkboxes, and complex CSS keyframe
-            animations.
-          </p>
-          <a href="Exersice/advance effect.html" class="view-link"
-            >View Exercise &rarr;</a
-          >
-        </article>
-      </div>
+      <section class="section reveal" id="lab-04" style="--delay: 0.3s">
+        <div class="container section-head">
+          <div>
+            <p class="section-tag">Lab 04</p>
+            <h2>Layouts and Responsive Exercises</h2>
+          </div>
+          <a class="text-link" href="lab%2004/">Go to Lab 04 Home</a>
+        </div>
+        <div class="container link-grid">
+          <a class="link-card" href="lab%2004/Exersice/breakpoint-system.html">
+            <span>01</span>
+            <h4>Breakpoint System</h4>
+            <p>Consistent breakpoints for responsive layouts.</p>
+          </a>
+          <a class="link-card" href="lab%2004/Exersice/display-exersises.html">
+            <span>02</span>
+            <h4>Display Exercises</h4>
+            <p>Block, inline, and display behavior practice.</p>
+          </a>
+          <a class="link-card" href="lab%2004/Exersice/flexbox-cards.html">
+            <span>03</span>
+            <h4>Flexbox Cards</h4>
+            <p>Card layouts with flexbox spacing.</p>
+          </a>
+          <a class="link-card" href="lab%2004/Exersice/flexbox-exersice.html">
+            <span>04</span>
+            <h4>Flexbox Exercises</h4>
+            <p>Alignment, ordering, and wrapping drills.</p>
+          </a>
+          <a class="link-card" href="lab%2004/Exersice/flexbox-nav.html">
+            <span>05</span>
+            <h4>Flexbox Navigation</h4>
+            <p>Responsive nav bars with flexbox.</p>
+          </a>
+          <a class="link-card" href="lab%2004/Exersice/grid-gallery.html">
+            <span>06</span>
+            <h4>Grid Gallery</h4>
+            <p>Gallery layout using CSS Grid.</p>
+          </a>
+          <a class="link-card" href="lab%2004/Exersice/media-query-exersice.html">
+            <span>07</span>
+            <h4>Media Query Exercises</h4>
+            <p>Adaptive styles across screen sizes.</p>
+          </a>
+          <a class="link-card" href="lab%2004/Exersice/position-exersice.html">
+            <span>08</span>
+            <h4>Position Exercises</h4>
+            <p>Relative, absolute, and fixed positioning.</p>
+          </a>
+          <a class="link-card" href="lab%2004/Exersice/responsive-table.html">
+            <span>09</span>
+            <h4>Responsive Table</h4>
+            <p>Table layouts that adapt to small screens.</p>
+          </a>
+          <a class="link-card" href="lab%2004/Exersice/user-prefernce.html">
+            <span>10</span>
+            <h4>User Preferences</h4>
+            <p>Respecting user motion and display settings.</p>
+          </a>
+        </div>
+      </section>
     </main>
 
-    <footer class="main-footer">
-      <p>&copy; 2026 Ibn e Amin | Web Technologies</p>
-      <p><small>University of Engineering & Technology (UET)</small></p>
+    <footer class="site-footer">
+      <div class="container">
+        <p>Made for Web Technologies Lab - UET Peshawar</p>
+        <p class="footer-meta">Ibn e Amin | 2026</p>
+      </div>
     </footer>
   </body>
 </html>
