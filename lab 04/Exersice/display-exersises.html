@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Property Showcase</title>
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/dispaly.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Display Property Showcase</h1>
+
+      <section>
+        <h2>1. Block vs Inline vs Inline-Block</h2>
+        <div class="box block-el">I am a Block element (full width).</div>
+        <div>
+          <span class="box inline-el">I am Inline.</span>
+          <span class="box inline-el">I sit next to others.</span>
+        </div>
+        <div class="box inline-block-el">Inline-Block (Custom Size)</div>
+      </section>
+
+      <section>
+        <h2>2. Table Display (No &lt;table&gt; tag)</h2>
+        <div class="pseudo-table">
+          <div class="pseudo-row">
+            <div class="pseudo-cell">Cell A</div>
+            <div class="pseudo-cell">Cell B</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>3. Responsive Display</h2>
+        <p class="mobile-only">📱 This tip only shows on Mobile!</p>
+        <div class="responsive-box">Box 1</div>
+        <div class="responsive-box">Box 2</div>
+        <div class="responsive-box">Box 3</div>
+      </section>
+
+      <section>
+        <h2>4. Hidden Demonstration</h2>
+        <div class="box">Visible Item</div>
+        <div class="box hidden-none">Hidden with display:none (Gone)</div>
+        <div class="box hidden-invisible">
+          Hidden with visibility:hidden (Gap remains)
+        </div>
+        <div class="box">Visible Item</div>
+      </section>
+    </main>
+  </body>
+</html>

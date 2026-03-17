@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 14: Responsive Data Table</title>
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/utilities.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Management</h1>
+      <p>Resize the window to 768px to see the table transform into cards.</p>
+
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="ID">101</td>
+            <td data-label="Name">Ibn e Amin</td>
+            <td data-label="Email">ameen@example.com</td>
+            <td data-label="Role">Admin</td>
+            <td data-label="Status" style="color: green">Active</td>
+          </tr>
+          <tr>
+            <td data-label="ID">102</td>
+            <td data-label="Name">waqar Ahmed</td>
+            <td data-label="Email">waqar@example.com</td>
+            <td data-label="Role">Editor</td>
+            <td data-label="Status" style="color: green">Active</td>
+          </tr>
+          <tr>
+            <td data-label="ID">103</td>
+            <td data-label="Name">John Doe</td>
+            <td data-label="Email">john@example.com</td>
+            <td data-label="Role">Subscriber</td>
+            <td data-label="Status" style="color: red">Inactive</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3: Positioning Challenge</title>
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/position.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Positioning Mastery</h1>
+      <p>Static on mobile, Fixed on desktop.</p>
+    </header>
+
+    <div class="layout-wrapper">
+      <main class="main-content">
+        <h2>Scroll down to see positioning in action!</h2>
+        <p>Notice how the sidebar behaves when you scroll.</p>
+
+        <div class="z-index-container">
+          <h3>Z-Index Battle</h3>
+          <div class="layer layer-1">z-index: 1</div>
+          <div class="layer layer-2">z-index: 3 (I win!)</div>
+          <div class="layer layer-3">z-index: 2</div>
+        </div>
+
+        <button
+          onclick="
+            document.querySelector('.modal-overlay').style.display = 'block'
+          "
+          style="margin-top: 50px; padding: 10px"
+        >
+          Open Modal Dialog
+        </button>
+      </main>
+
+      <aside class="sidebar">
+        <h3>Sticky Sidebar</h3>
+        <ul>
+          <li>I stack normally on mobile.</li>
+          <li>I stick to the screen on desktop!</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div class="modal-overlay">
+      <div class="modal-box">
+        <h2>Important Message</h2>
+        <p>I am full-screen on mobile, but a centered box on desktop.</p>
+        <button
+          onclick="
+            document.querySelector('.modal-overlay').style.display = 'none'
+          "
+        >
+          Close Modal
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

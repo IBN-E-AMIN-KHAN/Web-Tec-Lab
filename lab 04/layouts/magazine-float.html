@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magazine Layout - Float Showcase</title>
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/float.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>The Tech Times</h1>
+      <hr />
+    </header>
+
+    <div class="container clearfix">
+      <main class="main-content">
+        <article>
+          <h2>The Future of Web Layouts</h2>
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect width='300' height='200' fill='%230066cc'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Segoe UI, Tahoma, Geneva, Verdana, sans-serif' font-size='24' fill='%23ffffff'%3ETech%20Image%3C/text%3E%3C/svg%3E"
+            alt="Tech illustration"
+            class="img-wrapped-left"
+          />
+          <p>
+            Before Flexbox and Grid, developers relied heavily on the float
+            property. While it was originally intended for wrapping text around
+            images, it became the backbone of multi-column web design for over a
+            decade. This layout demonstrates how to handle these traditional
+            techniques while maintaining modern responsiveness.
+          </p>
+          <p>
+            The float property revolutionized web design by allowing content to
+            wrap around images and creating multi-column layouts without table
+            markup. Though newer layout methods have emerged, understanding
+            floats is essential for maintaining legacy code and appreciating how
+            far web design has evolved.
+          </p>
+
+          <div class="clearfix">
+            <h3>Latest Briefs</h3>
+            <div class="column">
+              <h4>📱 Mobile First</h4>
+              <p>
+                Starting with mobile styles ensures a lightweight experience and
+                better user engagement on smartphones and tablets.
+              </p>
+            </div>
+            <div class="column">
+              <h4>🔧 Clearfix Logic</h4>
+              <p>
+                Always clear your floats to prevent layout breakage. Use the
+                clearfix hack or modern flexbox/grid alternatives.
+              </p>
+            </div>
+            <div class="column">
+              <h4>📐 Responsive Floats</h4>
+              <p>
+                Use percentage widths to allow columns to fluidly resize across
+                different screen sizes.
+              </p>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <aside class="sidebar">
+        <h3>Trending Topics</h3>
+        <ul>
+          <li>CSS Grid Basics</li>
+          <li>Flexbox Mastery</li>
+          <li>Responsive Images</li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer class="container">
+      <hr />
+      <p>&copy; 2026 Web Design Lab | Magazine Layout with Floats</p>
+    </footer>
+  </body>
+</html>

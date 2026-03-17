@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 10: Media Query Demo</title>
+    <link rel="stylesheet" href="../Styles/base.css" />
+    <link rel="stylesheet" href="../Styles/media-queries.css" />
+  </head>
+  <body>
+    <div class="demo-container">
+      <header>
+        <h1>Media Query System</h1>
+        <div
+          class="breakpoint-indicator"
+          style="
+            padding: 20px;
+            border: 2px solid;
+            margin: 20px 0;
+            text-align: center;
+          "
+        ></div>
+      </header>
+
+      <nav class="demo-nav">
+        <a href="#" style="padding: 10px; background: #333; color: white"
+          >Link 1</a
+        >
+        <a href="#" style="padding: 10px; background: #333; color: white"
+          >Link 2</a
+        >
+        <a href="#" style="padding: 10px; background: #333; color: white"
+          >Link 3</a
+        >
+      </nav>
+
+      <main style="margin-top: 40px">
+        <section>
+          <h2>Typography Scaling</h2>
+          <p>
+            Observe how this text and the header above change size as you resize
+            your browser window. We use <code>rem</code> units to ensure smooth
+            scaling.
+          </p>
+        </section>
+
+        <section style="margin-top: 20px">
+          <h2>Layout & Navigation Changes</h2>
+          <p>
+            On mobile, the navigation links above are stacked vertically. On
+            tablets and desktops, they shift to a horizontal row using Flexbox.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

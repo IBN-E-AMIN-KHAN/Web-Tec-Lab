@@ -4,19 +4,16 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f9;
   color: #333;
   padding: 20px;
 }
-
 header {
   text-align: center;
   margin-bottom: 30px;
 }
-
 /* A responsive grid to display our background boxes */
 .grid-container {
   display: grid;
@@ -25,7 +22,6 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 /* Base styles for all demonstration boxes */
 .box {
   height: 250px;
@@ -40,12 +36,10 @@ header {
   color: white;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
 }
-
 /* --- 1. Solid Color --- */
 .solid-color {
   background-color: #6c5ce7;
 }
-
 /* --- 2. Image Backgrounds & Repeat Patterns --- */
 /* Picture 1: A small 50x50 image for repeating patterns */
 .bg-repeat {
@@ -66,23 +60,19 @@ header {
   background-repeat: repeat-y;
   background-position: center;
 }
-
 .bg-no-repeat {
   background-color: #2d3436;
   background-image: url("../Images/Background/pattern.png"); /* Slightly larger for this box */
   background-repeat: no-repeat;
   background-position: center;
 }
-
 /* --- 3. Gradients --- */
 .linear-gradient {
   background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
 }
-
 .radial-gradient {
   background: radial-gradient(circle, #f6d365 0%, #fda085 100%);
 }
-
 /* --- 4. Multiple Background Layers --- */
 /* Combines Picture 1 (small, no-repeat) over Picture 2 (large landscape) */
 .multiple-bg {
@@ -92,7 +82,6 @@ header {
     /* Bottom Layer: Large image, covering the whole box */
     url("../Images/Background/background.jpg") center/cover no-repeat;
 }
-
 /* --- 5. Background Blend Modes --- */
 /* Picture 2: A larger background image blended with colors and gradients */
 .blend-multiply {
@@ -102,7 +91,6 @@ header {
   background-position: center;
   background-blend-mode: multiply;
 }
-
 .blend-screen {
   background-image:
     linear-gradient(to right, #0984e3, #6c5ce7),
@@ -111,7 +99,6 @@ header {
   background-position: center;
   background-blend-mode: screen;
 }
-
 .blend-luminosity {
   background-image: url("../Images/Background/background.jpg");
   background-color: #fdcb6e;
@@ -119,7 +106,6 @@ header {
   background-position: center;
   background-blend-mode: luminosity;
 }
-
 .blend-overlay {
   background-image:
     radial-gradient(circle, #00b894, transparent),

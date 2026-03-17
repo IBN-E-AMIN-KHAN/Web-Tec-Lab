@@ -1,0 +1,356 @@
+/* Gallery Container */
+.gallery-grid {
+  display: grid;
+  /* Responsive Tracks: automatically creates columns at least 250px wide */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px; /* Fixed row height for alignment */
+  grid-auto-flow: dense; /* Fills in gaps automatically for Masonry effect */
+  gap: 15px;
+  padding: 20px 0;
+}
+
+/* Individual Gallery Item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #eee;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the grid cell without stretching */
+  transition: transform 0.5s ease;
+}
+
+/* --- Masonry-style Spanning --- */
+.tall {
+  grid-row: span 2;
+} /* Occupies 2 rows */
+.wide {
+  grid-column: span 2;
+} /* Occupies 2 columns */
+
+/* --- Hover Effects and Overlays --- */
+.overlay {
+  position: absolute;
+  inset: 0; /* Shorthand for top/bottom/left/right: 0 */
+  background: rgba(44, 62, 80, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* --- Grid Area Naming (Media Query Adjustment) --- */
+/* On Large Desktops, we force a specific "Featured" layout */
+@media (min-width: 1200px) {
+  .featured-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "main side1 side2"
+      "main side3 side4";
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .main-feat {
+    grid-area: main;
+    height: 415px;
+  }
+  .s1 {
+    grid-area: side1;
+  }
+  .s2 {
+    grid-area: side2;
+  }
+  .s3 {
+    grid-area: side3;
+  }
+  .s4 {
+    grid-area: side4;
+  }
+}
+
+.hg-grid-container {
+  display: grid;
+  grid-template-areas: "header" "nav" "main" "aside" "footer";
+  gap: 10px;
+}
+
+@media (min-width: 1024px) {
+  .hg-grid-container {
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas:
+      "header header header"
+      "nav    main   aside"
+      "footer footer footer";
+  }
+}
+.header {
+  grid-area: header;
+}
+.nav {
+  grid-area: nav;
+}
+.main {
+  grid-area: main;
+}
+.aside {
+  grid-area: aside;
+}
+.footer {
+  grid-area: footer;
+}
+
+/* for ecommerce grid*/
+/* Container for the whole page */
+.ecommerce-wrapper {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* 1. Filter Sidebar (Off-canvas on mobile) */
+.filter-sidebar {
+  grid-area: sidebar;
+  background: #f4f4f4;
+  padding: 20px;
+  /* Off-canvas mobile logic */
+  position: fixed;
+  left: -260px; /* Hidden off-screen */
+  top: 0;
+  width: 250px;
+  height: 100%;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.filter-sidebar.active {
+  left: 0; /* Slide in when active */
+}
+
+/* 2. Main Product Section */
+.product-section {
+  grid-area: main;
+}
+
+/* 3. Task 8: Responsive Product Grid */
+.product-grid {
+  display: grid;
+  gap: 20px;
+  /* Default: 1 column mobile */
+  grid-template-columns: 1fr;
+}
+
+/* Product Card Styling */
+.product-card {
+  border: 1px solid #ddd;
+  display: grid; /* Grid inside card for image/details arrangement */
+  grid-template-rows: 200px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.product-image {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 15px;
+}
+
+.btn-primary {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.hide-desktop {
+  display: block;
+}
+
+/* --- Responsive Breakpoints (Task 8 & 16) --- */
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns tablet */
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .ecommerce-wrapper {
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+    grid-template-columns: 250px 1fr; /* Sidebar becomes visible */
+  }
+
+  .filter-sidebar {
+    position: static; /* No longer off-canvas */
+    width: auto;
+    height: auto;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns desktop */
+  }
+
+  .hide-desktop {
+    display: none;
+  }
+}
+
+/* Dashboard */
+/* Dashboard Main Wrapper */
+.dashboard-container {
+  display: grid;
+  /* Desktop: Sidebar is 250px, Header/Main takes the rest */
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  height: 100vh;
+}
+
+.dash-sidebar {
+  grid-area: sidebar;
+  background: #525f6c;
+  color: white;
+}
+
+.dash-sidebar p {
+  margin: 0;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dash-sidebar p:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateX(4px);
+}
+.dash-header {
+  grid-area: header;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.dash-main {
+  grid-area: main;
+  background: #f0f2f5;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Tablet: Sidebar collapses (768px - 1024px) */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: 80px 1fr;
+  }
+  .sidebar-text {
+    display: none;
+  } /* Only icons would show in a real app */
+}
+
+/* Mobile: Sidebar disappears/Main becomes full width */
+@media (max-width: 767px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+  .dash-sidebar {
+    display: none;
+  }
+}
+
+/* Magzine grade */
+/* Magazine Container */
+.magazine-wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr; /* Mobile: Single column [cite: 215] */
+  padding: 20px;
+}
+
+/* Base Card Styling for Magazine */
+.mag-item {
+  background: #fff;
+  padding: 15px;
+  border-top: 4px solid #333; /* Magazine-style border */
+}
+
+/* Responsive Typography  */
+.mag-item h2 {
+  font-size: clamp(1.2rem, 5vw, 2.5rem); /* Scales based on screen size */
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+/* --- Tablet: Simplified Symmetric Grid (min-width: 768px) [cite: 211, 247] --- */
+@media (min-width: 768px) {
+  .magazine-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* Symmetric 2-column [cite: 211] */
+  }
+
+  .hero-article {
+    grid-column: span 2; /* Hero takes full width on tablet */
+  }
+}
+
+/* --- Desktop: Asymmetric Grid (min-width: 1024px) [cite: 210, 249] --- */
+@media (min-width: 1024px) {
+  .magazine-wrapper {
+    /* Asymmetric: Col 1 is large, Col 2&3 small, Col 4 medium  */
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    grid-template-rows: auto auto;
+  }
+
+  .hero-article {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .sidebar-article {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    border-top: none;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+  }
+}
